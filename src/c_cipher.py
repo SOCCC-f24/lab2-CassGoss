@@ -1,13 +1,16 @@
 import logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-def encrypt(email="abc012"):
 """
     Name:    Cassidy Goss
     Date:    20240930
     Course Number:    138
     Class Section:    EN
 """
+
+def encrypt(email="abc012"):
+"""
+
     TODO: What is the objective? 
 The objective is to encrypt the email variable with the pseudocode shifting each element up three.
     Args:
