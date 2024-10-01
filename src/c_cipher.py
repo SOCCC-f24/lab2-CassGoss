@@ -109,6 +109,8 @@ def decrypt(email="def345"):
         logging.info(output)
         return output   
 
+    email_lst = list(email)
+
     # TODO: apply the encrypt pseudocode but shift down 3
     new_ascii = ord(email_lst[0]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
@@ -122,7 +124,8 @@ def decrypt(email="def345"):
     email_lst[4] = chr(new_ascii)    
     new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 5 
     email_lst[5] = chr(new_ascii)  
-        
+    
+    email_str = "".join(email_lst)
     
     # keep all updates in the retVal (str) variablei
     # i.e.,
