@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format='%(message)s')
     Class Section:    EN
 """
 
-def encrypt(email="abc012"):
+def encrypt(email):
     """
     TODO: What is the objective? 
     The objective is to encrypt the email variable with the pseudocode shifting each element up three.
@@ -71,7 +71,7 @@ def encrypt(email="abc012"):
     retVal = email_str
     return retVal 
 
-def decrypt(email="def345"):
+def decrypt(email):
     """
     TODO: What is the objective? 
     #The objective is to apply the decrypt pseudocode to email and shift down three. 
@@ -133,5 +133,5 @@ def decrypt(email="def345"):
     #    email_str = " some string updates here "
     #    email_1 = email_str.strip()
     #    retVal = email_1
-    retVal = "aef345"
+    retVal = email_str
     return retVal
