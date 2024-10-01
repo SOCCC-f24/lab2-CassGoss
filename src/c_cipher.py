@@ -14,10 +14,10 @@ def encrypt(email="abc012"):
     The objective is to encrypt the email variable with the pseudocode shifting each element up three.
     Args:
         TODO: what arguments and data types are expected? (i.e., email)
-    #The expected arguments are "new_ascii" which updates the element, and shift it down three. 
-    # "email_lst" converts the ascii into a string. 
-    #"len_flag" which validates the length of the variable "email"
-    #The data types expected are string for the email variable. Boolean for the anum_flag.
+    The expected arguments are "new_ascii" which updates the element, and shift it down three. 
+    "email_lst" converts the ascii into a string. 
+    "len_flag" which validates the length of the variable "email"
+    The data types expected are string for the email variable. Boolean for the anum_flag.
     Returns:
         TODO: what varibale and data types are being returned?   
     #The variable returned is after the psuedocode is implemented changing the email variable to shift up three. The expected data type is a string.
@@ -30,7 +30,7 @@ def encrypt(email="abc012"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[:3].isalpha() != True or email[3:].isdecimal() != True
+    anum_flag = not (email[:3].isalpha() and email[3:].isdigit()) 
 
     if len_flag:                         # NOTE: here we provide input validation on length
         output = "Length check failed\n"
@@ -61,7 +61,7 @@ def encrypt(email="abc012"):
     email_lst[5] = chr(new_ascii)  
         
     # TODO: fix line below, convert list into a string
-    email_str = "".join(email_lst)
+    email_str = ''.join(email_lst)
 
     # keep all updates in the retVal (str) variablei
     # i.e.,
@@ -96,19 +96,20 @@ def decrypt(email="def345"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = email[:3].isalpha() != True or email[3:].isdecimal() != True
+   anum_flag = not (email[:3].isalpha() and email[3:].isdigit())
 
-    if len_flag:                         # NOTE: here we provide input validation on length
+    if len_flag:                         # input validation on length
         output = "Length check failed\n"
         output += "Email must be 6 characters long."
         logging.info(output)
         return output        
-    if anum_flag:                        # NOTE: here we provide input validation on alpha/num
+    if anum_flag:                        # validation on alpha/num
         output = "alpha num check failed\n"
         output += "Email must have 3 letters followed by 3 digits."
         logging.info(output)
         return output   
 
+    #string into a list.
     email_lst = list(email)
 
     # TODO: apply the encrypt pseudocode but shift down 3
@@ -125,7 +126,7 @@ def decrypt(email="def345"):
     new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 5 
     email_lst[5] = chr(new_ascii)  
     
-    email_str = "".join(email_lst)
+    email_str = ''.join(email_lst)
     
     # keep all updates in the retVal (str) variablei
     # i.e.,
