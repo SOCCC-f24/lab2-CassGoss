@@ -9,20 +9,19 @@ logging.basicConfig(level=logging.INFO, format='%(message)s')
 """
 
 def encrypt(email="abc012"):
-"""
-
+    """
     TODO: What is the objective? 
-The objective is to encrypt the email variable with the pseudocode shifting each element up three.
+    The objective is to encrypt the email variable with the pseudocode shifting each element up three.
     Args:
         TODO: what arguments and data types are expected? (i.e., email)
-#The expected arguments are "new_ascii" which updates the element, and shift it down three. 
-# "email_lst" converts the ascii into a string. 
-#"len_flag" which validates the length of the variable "email"
-#The data types expected are string for the email variable. Boolean for the anum_flag.
+    #The expected arguments are "new_ascii" which updates the element, and shift it down three. 
+    # "email_lst" converts the ascii into a string. 
+    #"len_flag" which validates the length of the variable "email"
+    #The data types expected are string for the email variable. Boolean for the anum_flag.
     Returns:
         TODO: what varibale and data types are being returned?   
-#The variable returned is after the psuedocode is implemented changing the email variable to shift up three. The expected data type is a string.
-"""
+    #The variable returned is after the psuedocode is implemented changing the email variable to shift up three. The expected data type is a string.
+    """
     output = "" 
     len_flag = len(email) != 6
     # TODO: fix line below and, implement functionality rather than literals
@@ -75,18 +74,18 @@ The objective is to encrypt the email variable with the pseudocode shifting each
 def decrypt(email="def345"):
     """
     TODO: What is the objective? 
-#The objective is to apply the decrypt pseudocode to email and shift down three. 
+    #The objective is to apply the decrypt pseudocode to email and shift down three. 
 
     Args:
         TODO: what arguments and data types are expected? (i.e., email)
-#The expected arguments are "new_ascii" which updates the element, and shift it down three. 
-# "email_lst" converts the ascii into a string. 
-#"len_flag" which validates the length of the variable "email"
-#The data types expected are string for the email variable. Boolean for the anum_flag.
+    #The expected arguments are "new_ascii" which updates the element, and shift it down three. 
+    # "email_lst" converts the ascii into a string. 
+    #"len_flag" which validates the length of the variable "email"
+    #The data types expected are string for the email variable. Boolean for the anum_flag.
 
     Returns:
         TODO: what varibale and data types are being returned?   
-#The variable returned is after the psuedocode is implemented changing the email variable to shift down three. The expected data type is a string. 
+    #The variable returned is after the psuedocode is implemented changing the email variable to shift down three. The expected data type is a string. 
     """
     # input validation
     output = "" 
