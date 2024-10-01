@@ -96,7 +96,7 @@ def decrypt(email="def345"):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-   anum_flag = not (email[:3].isalpha() and email[3:].isdigit())
+    anum_flag = not (email[:3].isalpha() and email[3:].isdigit())
 
     if len_flag:                         # input validation on length
         output = "Length check failed\n"
