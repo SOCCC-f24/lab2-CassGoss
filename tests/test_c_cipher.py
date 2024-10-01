@@ -9,7 +9,7 @@ def test_kick_the_front_tire():
 def test_encrypt_length_error(caplog):
     """Test that a length error message is logged for invalid email size"""
     with caplog.at_level(logging.INFO):
-        result = encrypt("abcd1234")
+        result = encrypt("aef345")
     assert "Length check failed" in caplog.text
     assert "Email must be 6 characters long." in caplog.text
     assert result == "Length check failed\nEmail must be 6 characters long."
@@ -17,7 +17,7 @@ def test_encrypt_length_error(caplog):
 def test_encrypt_alphanumeric_error(caplog):
     """Test that an alphanumeric error message is logged for invalid email format"""
     with caplog.at_level(logging.INFO):
-        result = encrypt("abc1@3")
+        result = encrypt("aef345")
     assert "alpha num check failed" in caplog.text
     assert "Email must have 3 letters followed by 3 digits." in caplog.text
     assert result == "alpha num check failed\nEmail must have 3 letters followed by 3 digits."
