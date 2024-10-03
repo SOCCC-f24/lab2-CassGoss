@@ -30,7 +30,7 @@ def encrypt(email):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = not (email[:3].isalpha() and email[3:].isdigit()) 
+    anum_flag = not (email[:3].isalpha() or not email[3:].isdigit()) 
 
     if len_flag:                         # NOTE: here we provide input validation on length
         output = "Length check failed\n"
@@ -48,15 +48,20 @@ def encrypt(email):
         
     # TODO: complete line(s) below, convert EACH new element into a string
     new_ascii = ord(email_lst[0]) + 3    # NOTE: here we extract and update element at 0 
-    email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
+    email_lst[0] = chr(new_ascii)   # NOTE: here we convert our ASCII into string
+    
     new_ascii = ord(email_lst[1]) + 3    # NOTE: here we extract and update element at 1 
     email_lst[1] = chr(new_ascii)   
+    
     new_ascii = ord(email_lst[2]) + 3    # NOTE: here we extract and update element at 2 
     email_lst[2] = chr(new_ascii)    
+    
     new_ascii = ord(email_lst[3]) + 3    # NOTE: here we extract and update element at 3 
     email_lst[3] = chr(new_ascii) 
+    
     new_ascii = ord(email_lst[4]) + 3    # NOTE: here we extract and update element at 4 
     email_lst[4] = chr(new_ascii)    
+    
     new_ascii = ord(email_lst[5]) + 3    # NOTE: here we extract and update element at 5 
     email_lst[5] = chr(new_ascii)  
         
@@ -96,7 +101,7 @@ def decrypt(email):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = not (email[:3].isalpha() and email[3:].isdigit())
+    anum_flag = not (email[:3].isalpha() or not email[3:].isdigit())
 
     if len_flag:                         # input validation on length
         output = "Length check failed\n"
@@ -115,14 +120,19 @@ def decrypt(email):
     # TODO: apply the encrypt pseudocode but shift down 3
     new_ascii = ord(email_lst[0]) - 3    # NOTE: here we extract and update element at 0 
     email_lst[0] = chr(new_ascii)        # NOTE: here we convert our ASCII into string
+    
     new_ascii = ord(email_lst[1]) - 3    # NOTE: here we extract and update element at 1 
     email_lst[1] = chr(new_ascii)   
+    
     new_ascii = ord(email_lst[2]) - 3    # NOTE: here we extract and update element at 2 
     email_lst[2] = chr(new_ascii)    
+    
     new_ascii = ord(email_lst[3]) - 3    # NOTE: here we extract and update element at 3 
     email_lst[3] = chr(new_ascii) 
+    
     new_ascii = ord(email_lst[4]) - 3    # NOTE: here we extract and update element at 4 
     email_lst[4] = chr(new_ascii)    
+    
     new_ascii = ord(email_lst[5]) - 3    # NOTE: here we extract and update element at 5 
     email_lst[5] = chr(new_ascii)  
     
