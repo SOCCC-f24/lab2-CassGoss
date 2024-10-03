@@ -30,7 +30,7 @@ def encrypt(email):
     #     A = email[:3] (check first half)
     #     B = email[3:] (check second half)
     #     enum_flag = A or B
-    anum_flag = not (email[:3].isalpha() or not email[3:].isdigit()) 
+    anum_flag = not email[:3].isalpha() or not email[3:].isdigit() 
 
     if len_flag:                         # NOTE: here we provide input validation on length
         output = "Length check failed\n"
@@ -143,5 +143,5 @@ def decrypt(email):
     #    email_str = " some string updates here "
     #    email_1 = email_str.strip()
     #    retVal = email_1
-    retVal = email_str
+    retVal = email
     return retVal
